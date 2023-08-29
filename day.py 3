@@ -1,0 +1,71 @@
+#unique elements
+
+l=[3,2,5,7,5,8]
+l=sorted(l)
+l=list(set(l))
+print(l)
+
+# fibanocci 
+n=int(input("enter the value"))
+l=[0,1]
+for i in range(0,n):
+    temp=l[i]+l[i+1]
+    l.insert(i+2,temp)
+    if(len(l)==n):
+        break
+    
+print(l)
+
+#contactbook
+
+
+names = []
+contact_numbers = []
+number = 7
+
+for i in range(number):
+    name = input("Name: ")
+    conatct_number = input("conatct Number: ")
+
+    names.append(name)
+    conatct_numbers.append(contact_number)
+ #\v is a tab :-
+print("\nName\t\t\tPhone Number\n")
+
+for i in range(number):
+    print("{}\v\v\v{}".format(names[i], phone_numbers[i]))
+#\n is new line :-
+search_term = input("\nEnter search term: ")
+
+print("Search result:")
+
+if search_term in names:
+    index = names.index(search_term)
+    conatact_number = contact_numbers[index]
+    print("Name: {}, conact Number: {}".format(search_term, phone_number))
+
+else:
+    print("Name is Not Found in list")
+
+#frequency
+
+# Input a sentence
+sentence = input("Enter a sentence: ")
+
+word_list = input("Enter words separated by spaces: ").split()
+
+word_frequency = {}
+
+words = sentence.split()
+
+for word in words:
+        word = word.strip('.,!?').lower()
+    
+    if word in word_list:
+        
+        if word in word_frequency:
+            word_frequency[word] += 1
+        else:
+            word_frequency[word] = 1
+
+print("Word frequency:", word_frequency)
